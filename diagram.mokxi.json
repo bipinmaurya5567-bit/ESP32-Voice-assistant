@@ -1,0 +1,940 @@
+{
+  "version": 1,
+  "name": "First blink copy 2",
+  "parts": [
+    {
+      "id": "r1",
+      "type": "resistor",
+      "props": {
+        "value": 220
+      },
+      "x": 1840,
+      "y": 400,
+      "rot": 0
+    },
+    {
+      "id": "led1",
+      "type": "led",
+      "props": {
+        "color": "red"
+      },
+      "x": 2000,
+      "y": 460,
+      "rot": 0
+    },
+    {
+      "id": "bb1",
+      "type": "breadboard-half",
+      "props": {},
+      "x": 700,
+      "y": 240,
+      "rot": 0
+    },
+    {
+      "id": "esp321",
+      "type": "esp32",
+      "props": {
+        "wifiRssi": -52,
+        "wifiSsid": "Mokxi-Lab",
+        "wifiPassword": "breadboard"
+      },
+      "x": 320,
+      "y": 20,
+      "rot": 90
+    },
+    {
+      "id": "ssd13061",
+      "type": "ssd1306",
+      "props": {
+        "address": 60
+      },
+      "x": 1460,
+      "y": 620,
+      "rot": 0
+    },
+    {
+      "id": "max98357a1",
+      "type": "max98357a",
+      "props": {},
+      "x": 1780,
+      "y": -100,
+      "rot": 0
+    },
+    {
+      "id": "inmp4411",
+      "type": "inmp441",
+      "props": {
+        "sound": "voice",
+        "level": 70,
+        "freq": 1000
+      },
+      "x": 2000,
+      "y": -140,
+      "rot": 0
+    },
+    {
+      "id": "speaker1",
+      "type": "speaker",
+      "props": {
+        "ohms": 8
+      },
+      "x": 1720,
+      "y": -300,
+      "rot": 0
+    }
+  ],
+  "wires": [
+    {
+      "id": "w1",
+      "from": "esp321:D23",
+      "to": "bb1:a22",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 600,
+          "y": 860
+        },
+        {
+          "x": 1140,
+          "y": 860
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "from": "esp321:D22",
+      "to": "bb1:a21",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 580,
+          "y": 900
+        },
+        {
+          "x": 1120,
+          "y": 900
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "from": "esp321:TX0",
+      "to": "bb1:a20",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 560,
+          "y": 940
+        },
+        {
+          "x": 1100,
+          "y": 940
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "from": "esp321:RX0",
+      "to": "bb1:a19",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 540,
+          "y": 320
+        },
+        {
+          "x": 920,
+          "y": 380
+        },
+        {
+          "x": 1080,
+          "y": 380
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "from": "esp321:D21",
+      "to": "bb1:a18",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 520,
+          "y": 500
+        },
+        {
+          "x": 1060,
+          "y": 500
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "from": "esp321:D19",
+      "to": "bb1:a17",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 500,
+          "y": 540
+        },
+        {
+          "x": 1040,
+          "y": 540
+        }
+      ]
+    },
+    {
+      "id": "w7",
+      "from": "esp321:D5",
+      "to": "bb1:a16",
+      "color": "#d94f9c",
+      "bends": [
+        {
+          "x": 460,
+          "y": 580
+        },
+        {
+          "x": 1020,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w8",
+      "from": "esp321:TX2",
+      "to": "bb1:a15",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 440,
+          "y": 620
+        },
+        {
+          "x": 1000,
+          "y": 620
+        }
+      ]
+    },
+    {
+      "id": "w9",
+      "from": "esp321:RX2",
+      "to": "bb1:a14",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 420,
+          "y": 660
+        },
+        {
+          "x": 980,
+          "y": 660
+        }
+      ]
+    },
+    {
+      "id": "w10",
+      "from": "esp321:D4",
+      "to": "bb1:a13",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 400,
+          "y": 700
+        },
+        {
+          "x": 960,
+          "y": 700
+        }
+      ]
+    },
+    {
+      "id": "w11",
+      "from": "esp321:D0",
+      "to": "bb1:a12",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 380,
+          "y": 740
+        },
+        {
+          "x": 940,
+          "y": 740
+        }
+      ]
+    },
+    {
+      "id": "w12",
+      "from": "esp321:D2",
+      "to": "bb1:a11",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 360,
+          "y": 780
+        },
+        {
+          "x": 920,
+          "y": 780
+        }
+      ]
+    },
+    {
+      "id": "w13",
+      "from": "esp321:D15",
+      "to": "bb1:a10",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 340,
+          "y": 820
+        },
+        {
+          "x": 900,
+          "y": 820
+        }
+      ]
+    },
+    {
+      "id": "w14",
+      "from": "esp321:3V3",
+      "to": "bb1:a9",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 320,
+          "y": 320
+        },
+        {
+          "x": 1040,
+          "y": 380
+        },
+        {
+          "x": 880,
+          "y": 380
+        }
+      ]
+    },
+    {
+      "id": "w15",
+      "from": "esp321:EN",
+      "to": "bb1:j22",
+      "color": "#d94f9c",
+      "bends": [
+        {
+          "x": 600,
+          "y": 120
+        },
+        {
+          "x": 1140,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w16",
+      "from": "esp321:VP",
+      "to": "bb1:j21",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 580,
+          "y": 120
+        },
+        {
+          "x": 1120,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w17",
+      "from": "esp321:VN",
+      "to": "bb1:j20",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 560,
+          "y": 120
+        },
+        {
+          "x": 1100,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w18",
+      "from": "esp321:D34",
+      "to": "bb1:j19",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 540,
+          "y": 120
+        },
+        {
+          "x": 1080,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w19",
+      "from": "esp321:D35",
+      "to": "bb1:j18",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 520,
+          "y": 120
+        },
+        {
+          "x": 1060,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w20",
+      "from": "esp321:D32",
+      "to": "bb1:j17",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 500,
+          "y": 120
+        },
+        {
+          "x": 1040,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w21",
+      "from": "esp321:D33",
+      "to": "bb1:j16",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 480,
+          "y": 120
+        },
+        {
+          "x": 1020,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w22",
+      "from": "esp321:D25",
+      "to": "bb1:j15",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 460,
+          "y": 120
+        },
+        {
+          "x": 1000,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w23",
+      "from": "esp321:D26",
+      "to": "bb1:j14",
+      "color": "#d94f9c",
+      "bends": [
+        {
+          "x": 440,
+          "y": 120
+        },
+        {
+          "x": 980,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w24",
+      "from": "esp321:D27",
+      "to": "bb1:j13",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 420,
+          "y": 120
+        },
+        {
+          "x": 960,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w25",
+      "from": "esp321:D14",
+      "to": "bb1:j12",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 400,
+          "y": 120
+        },
+        {
+          "x": 940,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w26",
+      "from": "esp321:D12",
+      "to": "bb1:j11",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 380,
+          "y": 120
+        },
+        {
+          "x": 920,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w27",
+      "from": "esp321:GND",
+      "to": "bb1:j10",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 360,
+          "y": 120
+        },
+        {
+          "x": 900,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w28",
+      "from": "esp321:D13",
+      "to": "bb1:j9",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 340,
+          "y": 120
+        },
+        {
+          "x": 880,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w29",
+      "from": "esp321:VIN",
+      "to": "bb1:j8",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 320,
+          "y": 120
+        },
+        {
+          "x": 860,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w30",
+      "from": "ssd13061:GND",
+      "to": "led1:C",
+      "color": "#0c0d0d",
+      "bends": [
+        {
+          "x": 1520,
+          "y": 580
+        },
+        {
+          "x": 2040,
+          "y": 580
+        }
+      ]
+    },
+    {
+      "id": "w31",
+      "from": "ssd13061:GND",
+      "to": "bb1:i10",
+      "color": "#d94f9c",
+      "bends": [
+        {
+          "x": 1520,
+          "y": 540
+        },
+        {
+          "x": 1760,
+          "y": 540
+        },
+        {
+          "x": 1760,
+          "y": 280
+        },
+        {
+          "x": 900,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "id": "w32",
+      "from": "ssd13061:VCC",
+      "to": "bb1:b9",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1540,
+          "y": 400
+        },
+        {
+          "x": 880,
+          "y": 400
+        }
+      ]
+    },
+    {
+      "id": "w33",
+      "from": "inmp4411:VDD",
+      "to": "ssd13061:VCC",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 2120,
+          "y": 80
+        },
+        {
+          "x": 1540,
+          "y": 80
+        }
+      ]
+    },
+    {
+      "id": "w34",
+      "from": "ssd13061:SCL",
+      "to": "bb1:c10",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 1560,
+          "y": 500
+        },
+        {
+          "x": 900,
+          "y": 500
+        }
+      ]
+    },
+    {
+      "id": "w35",
+      "from": "ssd13061:SDA",
+      "to": "bb1:e13",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 1580,
+          "y": 460
+        },
+        {
+          "x": 960,
+          "y": 460
+        }
+      ]
+    },
+    {
+      "id": "w36",
+      "from": "r1:2",
+      "to": "led1:A",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 1940,
+          "y": 420
+        },
+        {
+          "x": 1940,
+          "y": 540
+        },
+        {
+          "x": 2020,
+          "y": 540
+        }
+      ]
+    },
+    {
+      "id": "w37",
+      "from": "esp321:D18",
+      "to": "r1:1",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 480,
+          "y": 380
+        },
+        {
+          "x": 1820,
+          "y": 380
+        },
+        {
+          "x": 1820,
+          "y": 420
+        }
+      ]
+    },
+    {
+      "id": "w38",
+      "from": "speaker1:2",
+      "to": "max98357a1:SPK-",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 1700,
+          "y": -240
+        },
+        {
+          "x": 1700,
+          "y": -120
+        },
+        {
+          "x": 1900,
+          "y": -120
+        }
+      ]
+    },
+    {
+      "id": "w39",
+      "from": "speaker1:1",
+      "to": "max98357a1:SPK+",
+      "color": "#d94f9c",
+      "bends": [
+        {
+          "x": 1660,
+          "y": -260
+        },
+        {
+          "x": 1660,
+          "y": -160
+        },
+        {
+          "x": 1840,
+          "y": -160
+        }
+      ]
+    },
+    {
+      "id": "w40",
+      "from": "inmp4411:VDD",
+      "to": "max98357a1:SD",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 2120,
+          "y": 120
+        },
+        {
+          "x": 1880,
+          "y": 120
+        }
+      ]
+    },
+    {
+      "id": "w41",
+      "from": "bb1:h10",
+      "to": "max98357a1:GND",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 900,
+          "y": 340
+        },
+        {
+          "x": 1900,
+          "y": 340
+        }
+      ]
+    },
+    {
+      "id": "w42",
+      "from": "bb1:h10",
+      "to": "max98357a1:LRC",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 900,
+          "y": 300
+        },
+        {
+          "x": 1800,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "w43",
+      "from": "inmp4411:GND",
+      "to": "bb1:g10",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 2140,
+          "y": 160
+        },
+        {
+          "x": 900,
+          "y": 160
+        }
+      ]
+    },
+    {
+      "id": "w44",
+      "from": "inmp4411:LR",
+      "to": "bb1:g10",
+      "color": "#e8a33d",
+      "bends": [
+        {
+          "x": 2080,
+          "y": 200
+        },
+        {
+          "x": 900,
+          "y": 200
+        }
+      ]
+    },
+    {
+      "id": "w45",
+      "from": "inmp4411:SD",
+      "to": "bb1:h17",
+      "color": "#8a5cf5",
+      "bends": [
+        {
+          "x": 2100,
+          "y": 240
+        },
+        {
+          "x": 1040,
+          "y": 240
+        }
+      ]
+    },
+    {
+      "id": "w46",
+      "from": "inmp4411:WS",
+      "to": "bb1:h15",
+      "color": "#20b2c6",
+      "bends": [
+        {
+          "x": 2060,
+          "y": 320
+        },
+        {
+          "x": 1000,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "w47",
+      "from": "inmp4411:SCK",
+      "to": "bb1:h14",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 2040,
+          "y": 280
+        },
+        {
+          "x": 980,
+          "y": 280
+        }
+      ]
+    },
+    {
+      "id": "w48",
+      "from": "max98357a1:VIN",
+      "to": "inmp4411:VDD",
+      "color": "#7a8290",
+      "bends": [
+        {
+          "x": 1920,
+          "y": 60
+        },
+        {
+          "x": 2120,
+          "y": 60
+        }
+      ]
+    },
+    {
+      "id": "w49",
+      "from": "max98357a1:GAIN",
+      "to": "max98357a1:GND",
+      "color": "#e14b4b",
+      "bends": [
+        {
+          "x": 1880,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "id": "w50",
+      "from": "bb1:h13",
+      "to": "max98357a1:DIN",
+      "color": "#2f6fed",
+      "bends": [
+        {
+          "x": 960,
+          "y": 100
+        },
+        {
+          "x": 1840,
+          "y": 100
+        }
+      ]
+    },
+    {
+      "id": "w51",
+      "from": "bb1:h12",
+      "to": "max98357a1:BCLK",
+      "color": "#1f9d55",
+      "bends": [
+        {
+          "x": 940,
+          "y": 180
+        },
+        {
+          "x": 1820,
+          "y": 180
+        }
+      ]
+    }
+  ],
+  "projects": {
+    "esp321": {
+      "files": {
+        "sketch.ino": "#include <Wire.h>\n#include <Adafruit_GFX.h>\n#include <Adafruit_SSD1306.h>\n#include <driver/i2s.h>\n\nAdafruit_SSD1306 display(128, 64, &Wire, -1);\n\nconst int kLed = 18;\nconst int kThreshold = 600;  // mic level that triggers the beep\n\nunsigned long lastBlink = 0, lastDraw = 0, lastBeep = 0;\nbool ledOn = false;\n\nvoid setupI2S(i2s_port_t port, bool rx, int bck, int ws, int dataPin) {\n  i2s_config_t c;\n  memset(&c, 0, sizeof(c));\n  c.mode = (i2s_mode_t)(I2S_MODE_MASTER | (rx ? I2S_MODE_RX : I2S_MODE_TX));\n  c.sample_rate = 16000;\n  c.bits_per_sample = rx ? I2S_BITS_PER_SAMPLE_32BIT : I2S_BITS_PER_SAMPLE_16BIT;\n  c.channel_format = rx ? I2S_CHANNEL_FMT_ONLY_LEFT : I2S_CHANNEL_FMT_RIGHT_LEFT;\n  c.communication_format = I2S_COMM_FORMAT_STAND_I2S;\n  c.dma_buf_count = 4;\n  c.dma_buf_len = 256;\n  i2s_pin_config_t p;\n  memset(&p, 0, sizeof(p));\n  p.bck_io_num = bck;\n  p.ws_io_num = ws;\n  p.data_out_num = rx ? I2S_PIN_NO_CHANGE : dataPin;\n  p.data_in_num = rx ? dataPin : I2S_PIN_NO_CHANGE;\n  p.mck_io_num = I2S_PIN_NO_CHANGE;\n  i2s_driver_install(port, &c, 0, NULL);\n  i2s_set_pin(port, &p);\n}\n\nvoid beep() {\n  int16_t buf[80];\n  for (int i = 0; i < 40; i++) {\n    int16_t s = (int16_t)(8000 * sin(2 * PI * i / 40.0));\n    buf[2 * i] = s;\n    buf[2 * i + 1] = s;\n  }\n  size_t w;\n  for (int n = 0; n < 100; n++) i2s_write(I2S_NUM_1, buf, sizeof(buf), &w, 100);\n}\n\nint readMicLevel() {\n  static int32_t m[256];\n  size_t r = 0;\n  i2s_read(I2S_NUM_0, m, sizeof(m), &r, 100);\n  int32_t peak = 0;\n  for (size_t i = 0; i < r / 4; i++) {\n    int32_t v = abs(m[i] >> 14);\n    if (v > peak) peak = v;\n  }\n  return (int)peak;\n}\n\nvoid drawScreen(int level, bool beeping) {\n  display.clearDisplay();\n  display.setTextSize(1);\n  display.setTextColor(SSD1306_WHITE);\n  display.setCursor(0, 0);\n  display.println(\"ESP32 all-in-one test\");\n  display.setCursor(0, 16);\n  display.print(\"Mic: \");\n  display.println(level);\n  int w = constrain(map(level, 0, 2000, 0, 128), 0, 128);\n  display.drawRect(0, 30, 128, 10, SSD1306_WHITE);\n  display.fillRect(0, 30, w, 10, SSD1306_WHITE);\n  display.setCursor(0, 48);\n  display.print(\"LED: \");\n  display.print(ledOn ? \"ON \" : \"OFF\");\n  display.print(\"  Spk: \");\n  display.print(beeping ? \"BEEP\" : \"idle\");\n  display.display();\n}\n\nvoid setup() {\n  Serial.begin(115200);\n  pinMode(kLed, OUTPUT);\n  Wire.begin(4, 15);\n  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {\n    Serial.println(\"OLED failed\");\n  }\n  setupI2S(I2S_NUM_0, true, 26, 25, 32);   // mic: SCK, WS, SD\n  setupI2S(I2S_NUM_1, false, 14, 27, 33);  // speaker: BCLK, LRC, DIN\n  display.clearDisplay();\n  display.display();\n  Serial.println(\"Setup done\");\n}\n\nvoid loop() {\n  unsigned long now = millis();\n\n  if (now - lastBlink >= 500) {\n    lastBlink = now;\n    ledOn = !ledOn;\n    digitalWrite(kLed, ledOn);\n  }\n\n  int level = readMicLevel();\n  bool beeping = false;\n\n  if (level > kThreshold && now - lastBeep > 1500) {\n    drawScreen(level, true);\n    beep();\n    lastBeep = millis();\n    beeping = true;\n  }\n\n  if (now - lastDraw >= 200) {\n    lastDraw = now;\n    drawScreen(level, beeping);\n    Serial.print(\"Mic level: \");\n    Serial.println(level);\n  }\n}"
+      },
+      "main": "sketch.ino"
+    }
+  }
+}
