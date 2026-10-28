@@ -1,34 +1,38 @@
-# First blink copy 2
+# ESP32 Voice Assistant
 
-[![Open in Mokxi](https://app.mokxi.com/badge/open-in-mokxi.svg)](https://app.mokxi.com/p/b_orF1FzsIotmrc3)
+A voice-controlled AI assistant built on an ESP32. You speak, it answers
+out loud through a speaker, looks things up on the web, and performs actions
+such as turning a light on or off.
 
-A circuit and its code, made in [Mokxi](https://app.mokxi.com), the electronics simulator that runs in your browser.
+**Status: prototype (v0.1).** The hardware is built and tested in the Mokxi
+simulator. The AI, web lookup and voice commands are the next steps.
 
-## What is in here
+## Hardware
+ESP32 DevKit, INMP441 I2S microphone, MAX98357A I2S amplifier, 8 Ω speaker,
+SSD1306 OLED, LED + resistor, breadboard.
 
-- `First_blink_copy_2/`: the sketch for `esp321`, ready for the Arduino IDE (open `First_blink_copy_2/First_blink_copy_2.ino`).
-- `diagram.mokxi.json`: the whole Mokxi project (parts, wires and code). Mokxi opens it as it is.
-- `.vscode/`: settings, tasks and the recommended extension for VS Code.
+## Status
+| Part | Status |
+|---|---|
+| OLED SSD1306 | Working |
+| LED | Working |
+| Microphone INMP441 | Working |
+| Speaker MAX98357A | Untested |
+| Wi-Fi / AI | Not started |
 
-## Open it in Mokxi
+## Pin map (ESP32)
+- OLED: SDA D4, SCL D15
+- LED: D18 (through resistor)
+- Mic: SCK D26, WS D25, SD D32
+- Speaker amp: BCLK D14, LRC D27, DIN D33
 
-Press the badge above, or in the Mokxi editor choose **Export > Open from GitHub** and pick this repository.
+## Planned features
+- [ ] Talk to the assistant and hear spoken replies
+- [ ] Answer questions using information from the web
+- [ ] Voice commands: "turn off the light"
+- [ ] More devices (relay for a real lamp, sensors)
 
-## Work on it in VS Code
-
-1. Open this folder in VS Code. It suggests the **Mokxi** extension; install it.
-2. Run **Mokxi: Sign In** from the Command Palette (Ctrl+Shift+P, or Cmd+Shift+P on a Mac).
-3. Edit the sketch, then run **Mokxi: Sync** to send it to Mokxi, or **Mokxi: Open in Mokxi** to see it run.
-
-The tasks in `.vscode/tasks.json` (Terminal > Run Task) do the same from the terminal, and can compile with `arduino-cli` when you have it.
-
-## From a terminal
-
-```sh
-npx @mokxi/cli login            # once
-npx @mokxi/cli pull PROJECT_ID .  # get the latest from Mokxi (the id is in the project link)
-npx @mokxi/cli push         # send your edits to Mokxi
-npx @mokxi/cli run          # simulate it and print the serial output
-```
-
-Docs: https://app.mokxi.com/docs/editor/github-and-vs-code
+## Run
+Open `diagram.mokxi.json` in Mokxi, or flash
+`firmware/esp32_voice_assistant/esp32_voice_assistant.ino` to a real ESP32.
+Libraries needed: Adafruit GFX, Adafruit SSD1306.
