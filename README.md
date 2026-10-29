@@ -1,4 +1,6 @@
-# ESP32 Voice Assistant
+# ESP32 Voice Assistant 
+
+![Circuit](circuit.png)
 
 A voice-controlled AI assistant built on an ESP32. You speak, it answers
 out loud through a speaker, looks things up on the web, and performs actions
