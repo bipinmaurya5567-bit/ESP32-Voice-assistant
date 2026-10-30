@@ -19,8 +19,8 @@ SSD1306 OLED, LED + resistor, breadboard.
 | OLED SSD1306 | Working |
 | LED | Working |
 | Microphone INMP441 | Working |
-| Speaker MAX98357A | Untested |
-| Wi-Fi / AI | Not started |
+| Speaker MAX98357A | working |
+| Wi-Fi / AI | working |
 
 ## Pin map (ESP32)
 - OLED: SDA D4, SCL D15
